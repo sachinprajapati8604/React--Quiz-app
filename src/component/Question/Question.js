@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 import { useHistory } from "react-router";
 import './Question.css'
-import { select } from 'async';
+// import { select } from 'async';
 
 
 export default function Question({ currQues, setCurrQues, questions, options, correct, score, setScore, setQuestions }) {
@@ -42,7 +42,7 @@ export default function Question({ currQues, setCurrQues, questions, options, co
     
       return (
         <div className="question">
-          <h1>Question {currQues + 1}</h1>
+          <h1>Question {currQues + 1} of 10</h1>
     
           <div className="singleQuestion">
             <h2>{questions[currQues].question}</h2>

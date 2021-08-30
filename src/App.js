@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Footer from './component/Footer/Footer';
 import Home from './component/Home/Home';
