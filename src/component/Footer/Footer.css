@@ -4,5 +4,45 @@
 }
 .footer-box h5{
     text-align: center;
-    padding: 30px;
+    padding: 10px;
+    font-size: 1rem;
 }
+.icon-list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.icon-list li{
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 10px;
+
+}
+.icon-list li a{   
+    background-color: #fff;
+    color: blue;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+#linkedin:hover{
+    background-color: #0a66c2;
+    color: #fff;
+}
+#github:hover{
+    background-color: #fff;
+    color: #000;
+}
+#facebook:hover{
+    background-color: #0f8ff2;
+    color: #fff;
+}
+#insta:hover{
+    background-color: #c22e79;
+    color: #fff;
+}
+#twitter:hover{
+    background-color: #5aa4d6;
+    color: #fff;
+}
+
