@@ -3,12 +3,12 @@ import React, { useEffect } from 'react'
 import { useHistory } from 'react-router';
 import './Result.css'
 export default function Result({ name, score ,category}) {
-    // const history = useHistory();
-    // useEffect(() => {
-    //     if (!name) {
-    //         history.push("/");
-    //     }
-    // }, [name, history]);
+    const history = useHistory();
+    useEffect(() => {
+        if (!name) {
+            history.push("/");
+        }
+    }, [name, history]);
 
     return (
         <div className="result">
