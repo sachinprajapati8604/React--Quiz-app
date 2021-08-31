@@ -3,10 +3,19 @@ import { useEffect, useState } from "react";
 import Question from "../Question/Question";
 import { useHistory } from 'react-router';
 import "./Quiz.css";
+import CountDownTimer from "../CountDownTimer/CountDownTimer";
+import swal from 'sweetalert';
+
 
 const Quiz = ({ name, questions, score, setScore }) => {
     const [options, setOptions] = useState();
     const [currQues, setCurrQues] = useState(0);
+
+    // funtion for time up
+    let onTimesup = () => {
+        swal("Time's up!",`Your score is ${score} out of 10`);
+        history.push("/");
+    }
 
     const history = useHistory();
     useEffect(() => {
@@ -33,8 +42,17 @@ const Quiz = ({ name, questions, score, setScore }) => {
 
     return (
         <div className="quiz">
-            <span className="subtitle">Welcome, {name}</span>
-
+           
+           <div className="userDetail">
+           <span className="subtitle">Welcome, {name}</span>
+           
+           <CountDownTimer 
+               onTimesup={onTimesup}
+               duration={5* 60}
+           />
+           </div>
+          
+        
             {questions ? (
                 <>
                     <div className="quizInfo">
